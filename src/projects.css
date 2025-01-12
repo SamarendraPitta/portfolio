@@ -1,0 +1,75 @@
+.projects-container{
+    background-color: #2a2a2a; 
+    border: 1px solid #ffc857;
+    padding: 15px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.projects-container button{
+    color:rgb(223, 219, 213);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: medium;
+    background-color: transparent;
+    box-shadow: none;
+    justify-content: center;
+    border: transparent;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projects-container button:hover{
+    color:orange;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.each-project {
+    background-color: #333030;
+    box-shadow: 0 4px 8px rgba(0, 0, 1, 1);
+    color:rgb(223, 219, 213);
+    padding: 20px;
+    font-family: "Arial", sans-serif;
+    border-radius: 10px;
+    flex: 1 1 calc(33.33% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.name-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -5px;
+}
+
+.highlight-title {
+    font-weight: bold;
+    color: rgb(221, 188, 149);
+}
+
+.highlight-tech {
+    font-weight: bold;
+    color:rgb(221, 188, 149);
+}
+
+.highlight-keyword {
+    font-weight: bold;
+    background-color: #ffeeba; /* Yellow highlight for keywords */
+    color: #856404;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+
+
+@media (max-width: 768px) {
+    .each-project {
+        flex: 1 1 100%; /* Stacks the project boxes on smaller screens */
+    }
+}

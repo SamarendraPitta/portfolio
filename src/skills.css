@@ -1,0 +1,115 @@
+/* Skills container */
+.skills-container {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.skills-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Tabs container */
+.categories {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap; /* Prevents wrapping of the tabs */
+  justify-content: center;
+}
+
+/* Tab buttons */
+.categories button {
+  background-color: #5c534d;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+/* Active tab styling */
+.active-tab {
+  background-color: black;
+  color: whitesmoke;
+}
+
+/* Hover effect on tab buttons */
+.categories button:hover {
+  background-color: black;
+  color: orange;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+/* Skill card */
+.skill-card {
+  background-color: #2b2623;
+  text-align: center;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Ensure that the tabs stay horizontal but allow them to scroll horizontally */
+  .categories {
+    overflow-x: auto; /* Allows horizontal scrolling if the tabs overflow */
+    padding-bottom: 10px;
+  }
+
+  .categories button {
+    min-width: 100px; /* Ensure the buttons don't become too small */
+  }
+
+  /* Make the skill cards smaller and fit more per row */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* More items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust the font sizes and paddings for smaller screens */
+  .skills-container h2 {
+    font-size: 20px;
+  }
+
+  .categories button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .skill-card {
+    padding: 10px;
+  }
+
+  .skill-card p {
+    font-size: 12px;
+  }
+}
