@@ -57,7 +57,7 @@ const tabData = {
     ],
     "Other Skills/Tools":[
         { name: "RESTFUL API"},
-        { name: "XML"},
+        { name:"Hadoop - MapReduce"},
         { name: "XSLT"},
         { name: "Postman"},
         { name: "soapUI"},

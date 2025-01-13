@@ -107,4 +107,8 @@ li {
         flex-direction: row;
         justify-content: center; 
     }
+.experience-container{
+    font-size:15px;
+}
+
 }

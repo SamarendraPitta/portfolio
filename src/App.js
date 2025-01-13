@@ -14,9 +14,6 @@ import Projectspage from "./Projects";
 import Skillspage from "./skills";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(
-    JSON.parse(localStorage.getItem("darkMode")) || false
-  );
 
   const [isNavActive, setIsNavActive] = useState(false);
 
@@ -29,13 +26,9 @@ function App() {
     });
     Aos.refresh();
   }, []);
-  const toggleTheme = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
-    localStorage.setItem("darkMode", JSON.stringify(newMode));
-  };
+  
   const toggleNav = () => {
-    setIsNavActive(!isNavActive); // Toggle the navbar visibility
+    setIsNavActive(!isNavActive);
   };
 
   const redirecttogit = ()=>{
@@ -48,24 +41,31 @@ function App() {
     window.open("https://github.com/SamarendraPitta", "_blank")
   }
   return (
-    <div className={`container ${isDarkMode ? "dark-mode" : ""}`}>
+    <div className="container">
       {/* Navbar */}
-      <header className="navbar" data-aos = "zoom-in">
+      <header className="navbar" data-aos="zoom-in">
         <h1>#Sam.me</h1>
         <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <ul className={isNavActive ? "active" : ""}>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#projects" >Projects</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#blog">Blog</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </nav>
         <button className="toggle-theme" onClick={toggleNav}>
-          {isNavActive ? "✖" : "☰"} {/* Change the button text based on the state */}
-        </button>
-        <button className="toggle-theme" onClick={toggleTheme}>
-          {isDarkMode ? "☀️" : "🌙"}
+          {isNavActive ? "✖" : "☰"}
         </button>
       </header>
 
@@ -108,15 +108,15 @@ function App() {
         </p>
       </section>
 
-      <section className="skills" data-aos="zoom-in"> 
+      <section className="skills" id="skills" data-aos="zoom-in"> 
         <Skillspage />
       </section>
 
-      <section className="Projects" data-aos="zoom-in-down">
+      <section className="Projects" id="projects" data-aos="zoom-in-down">
         <Projectspage />
       </section>
 
-      <section className="exp" data-aos="fade-left">
+      <section className="exp" id="experience" data-aos="fade-left">
         <Exppage/>
       </section>
 

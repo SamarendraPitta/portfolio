@@ -1,6 +1,7 @@
 /* Global Styles */
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -16,6 +17,8 @@ body {
   max-width: 1000px;
   margin: auto;
   padding: 20px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -25,7 +28,10 @@ body {
   align-items: center;
   border-bottom: 1px solid #444;
   padding-bottom: 10px;
+  position: relative;
+  z-index: 1000;
 }
+
 
 .navbar ul {
   list-style: none;
@@ -60,9 +66,6 @@ body {
   display: none;
 }
 
-.toggle-theme:hover {
-  transform: rotate(20deg);
-}
 /* Hero Section */
 .hero {
   display: flex;
@@ -233,38 +236,50 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
 
-   .navbar ul {
+  .navbar ul {
     position: fixed;
     top: 0;
-    right: -250px;  /* Initially hide the navbar off-screen */
+    right: -250px; /* Initially hide the navbar off-screen */
     background-color: #121212;
-    height: 100vh;
+    height: 50vh;
     width: 250px;
     flex-direction: column;
-    gap: 30px;
+    gap: 0px;
     align-items: center;
     padding-top: 50px;
     transition: right 0.3s ease;
+    z-index: 1000;
   }
 
   .navbar ul.active {
-    right: 0;  /* Slide the navbar in from the right when it's active */
+    right: 0; /* Slide the navbar in from the right when active */
+  }
+
+  .navbar ul li {
+    margin: 15px 0;
   }
 
   .navbar ul li a {
     font-size: 18px;
+    color: #ffc857;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
 
-  /* Hide the toggle button on larger screens */
+  .navbar ul li a:hover {
+    color: #9f86c0;
+  }
+
   .toggle-theme {
     display: block;
-    z-index: 1001; /* Ensure the toggle button is always on top */
+    z-index: 1100; /* Ensure the toggle button is always on top */
   }
 
   .hero {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    z-index: 1;
   }
 
   .hero-left {

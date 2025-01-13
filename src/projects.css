@@ -72,4 +72,8 @@
     .each-project {
         flex: 1 1 100%; /* Stacks the project boxes on smaller screens */
     }
+
+    .projects-container{
+        font-size: 15px;
+    }
 }

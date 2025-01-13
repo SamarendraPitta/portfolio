@@ -10,7 +10,7 @@ const Exp = () => {
             company: "CSU",
             date: "August 2024 - Present",
             description: [
-                "Working as TA for Data Structures course. In Fall 2024 worked as TA for Artificial Intelligence course.",
+                "Working as TA for Object-Oriented Program. In Fall 2024 worked as TA for Artificial Intelligence course.",
                 "Assist in teaching and holding office hours to help students understand the course material.",
                 "Grade assignments and maintain records.",
             ],
