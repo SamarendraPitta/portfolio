@@ -16,7 +16,7 @@
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
-  flex-wrap: nowrap; /* Prevents wrapping of the tabs */
+  flex-wrap: nowrap;
   justify-content: center;
 }
 
@@ -75,27 +75,29 @@
   font-size: 14px;
   color: #ffffff;
 }
+.active-tab:active{
+  color: black;
+  background-color: orange;
+}
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  /* Ensure that the tabs stay horizontal but allow them to scroll horizontally */
+  
   .categories {
-    overflow-x: auto; /* Allows horizontal scrolling if the tabs overflow */
+    overflow-x: auto;
     padding-bottom: 10px;
   }
 
   .categories button {
-    min-width: 100px; /* Ensure the buttons don't become too small */
+    min-width: 100px; 
   }
 
-  /* Make the skill cards smaller and fit more per row */
+
   .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* More items per row */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
-  /* Adjust the font sizes and paddings for smaller screens */
   .skills-container h2 {
     font-size: 20px;
   }

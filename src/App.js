@@ -9,6 +9,7 @@ import { default as AOS, default as Aos } from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import Connect from "./contact";
 import Exppage from "./exp";
 import Projectspage from "./Projects";
 import Skillspage from "./skills";
@@ -31,15 +32,21 @@ function App() {
     setIsNavActive(!isNavActive);
   };
 
+  const handleNavClick = (sectionId) => {
+    setIsNavActive(false);
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const redirecttogit = ()=>{
     window.open("https://github.com/SamarendraPitta", "_blank")
   }
   const redirecttolinkedin = ()=>{
     window.open("https://www.linkedin.com/in/samarendrapitta/", "_blank")
   }
-  const redirecttoresume = ()=>{
-    window.open("https://github.com/SamarendraPitta", "_blank")
-  }
+
   return (
     <div className="container">
       {/* Navbar */}
@@ -48,19 +55,19 @@ function App() {
         <nav>
           <ul className={isNavActive ? "active" : ""}>
             <li>
-              <a href="#home">Home</a>
+              <a href="#home" onClick={() => handleNavClick('home')}>Home</a>
             </li>
             <li>
-              <a href="#projects" >Projects</a>
+              <a href="#projects" onClick={() => handleNavClick('projects')}>Projects</a>
             </li>
             <li>
-              <a href="#experience">Experience</a>
+              <a href="#experience"  onClick={() => handleNavClick('experience')}>Experience</a>
             </li>
             <li>
               <a href="#blog">Blog</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={() => handleNavClick('contact')}>Contact</a>
             </li>
           </ul>
         </nav>
@@ -69,11 +76,10 @@ function App() {
         </button>
       </header>
 
-      {/* Hero Section */}
       <section className="hero" data-aos="fade-up">
         <div className="hero-left">
           <h2>Samarendra</h2>
-          <p>Backend-Developer | Master Student | TA</p>
+          <p>Full-Stack Developer | Master Student | TA</p>
           <div className="links">
             <FontAwesomeIcon icon={faGithub} fade size="xl" onClick={redirecttogit} />
             <FontAwesomeIcon icon={faLinkedinIn} fade size="xl" onClick={redirecttolinkedin}/>
@@ -83,13 +89,13 @@ function App() {
             <a href="mailto:samarendra.pitta99@gmail.com" className="mail-button" >
               <FontAwesomeIcon icon={faEnvelope} fade size="xl" style={{color: "#FFD43B",}}/>
             </a>
-            <FontAwesomeIcon icon={faFilePdf} fade size="xl" onClick={redirecttoresume}/>
+            <FontAwesomeIcon icon={faFilePdf} fade size="xl" onClick={() => window.open('images/resume.pdf', '_blank')}/>
           </div>
         </div>
         <div className="hero-right">
           <img
-            src="https://via.placeholder.com/150"
-            alt="Samarendra"
+            src="images/pic2.jpeg"
+            alt=""
             className="profile-photo"
           />
         </div>
@@ -99,15 +105,12 @@ function App() {
       <section className="about" id="about" data-aos="fade-right">
         <h3>About Me</h3>
         <p>
-          Hello! My name is Samarendra, but my friends call me Sam. I'm a
-          Developer, Master’s Student, and a Teaching Assistant with a passion for coding and learning new technologies.
+          Hello! My name is Samarendra, but my friends call me Sam. I'm a Developer, Master’s Student, and a Teaching Assistant with a passion for coding and learning new technologies.
         </p>
         <p>
-          Currently, I work as a consultant specializing in developer tooling and
-          infrastructure, with expertise in cloud technologies, distributed systems, and web apps.
-        </p>
+          I am a Software Engineer with up to 3 years of professional experience in building software across a diverse range of technologies. A passionate Developer in creating user-friendly, complex web applications and Software components, utilizing cloud technology like AWS and Linux systems. In addition, I have experience in Python, ML and NLP libraries, as well as analyzing, processing, and visualizing Big Data.
+        </p>    
       </section>
-
       <section className="skills" id="skills" data-aos="zoom-in"> 
         <Skillspage />
       </section>
@@ -116,12 +119,16 @@ function App() {
         <Projectspage />
       </section>
 
-      <section className="exp" id="experience" data-aos="fade-left">
+      <section className="exp" id="experience" data-aos="zoom-in-down">
         <Exppage/>
       </section>
 
+      <section className="connect" id="contact" data-aos="zoom-in-down">
+        <Connect />
+      </section>
+
       {/* Support Section */}
-      <section className="support" data-aos = "zoom-in">
+      <section className="support" data-aos = "zoom-out">
         <h3>❤️ Support Me</h3>
         <p>
           If you enjoy my work, consider <a href="https://github.com/SamarendraPitta" className="support-link" target="_blank" rel="noopener noreferrer">supporting me</a> through my open-source contributions or projects.

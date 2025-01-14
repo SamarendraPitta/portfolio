@@ -34,7 +34,7 @@ function Projects() {
             ),
             technologies: (
                 <span className="highlight-tech">
-                    HTML, CSS, JS, Node.js, NGINX
+                    HTML, CSS, JavaScript, Node.js, NGINX, MySQL
                 </span> 
             ),
             link: "https://khaathwiktravels.com/",

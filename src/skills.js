@@ -17,7 +17,6 @@ import "./skills.css";
 const Skills = () => {
 const [activeTab, setActiveTab] = useState("Language"); // Default active tab
 
-  // Tab data for dynamic rendering
 const tabData = {
     Language: [
         { name: "Java", icon: faJava, color: "#d31212" },
@@ -27,9 +26,11 @@ const tabData = {
     ],
     Framework: [
         { name: "React", icon: faReact, color: "#043f6c" },
+        {name:"Next.js"},
         { name: "Node.js", icon: faNodeJs, color: "#16983d"},
-        {name: "Spring-Boot" },
-        {name: "Spring-JPA"},
+        {name: "Spring Boot" },
+        {name: "Spring JPA"},
+        {name:"Maven"},
         {name: "Hibernate"},
         {name: "Flask"}
     ],
@@ -49,7 +50,7 @@ const tabData = {
         { name: "S3", icon: faAws },
         {name:"Lambda", icon:faAws}
     ],
-    "CI/CD": [
+    "DevOps/ Infrastructure": [
         { name: "Git", icon: faGit , color: "#044d86"},
         { name: "GitHub", icon: faGithub},
         { name: "Docker", icon: faDocker, color: "#74C0FC"},
@@ -65,7 +66,8 @@ const tabData = {
         { name: "VS Code"},
         { name: "Ecllipse"},
         { name: "Android Studio"},
-        {name:"XAMPP"}
+        {name:"XAMPP"},
+        {name:"Linux"}
     ],
 };
 

@@ -11,8 +11,7 @@ const Exp = () => {
             date: "August 2024 - Present",
             description: [
                 "Working as TA for Object-Oriented Program. In Fall 2024 worked as TA for Artificial Intelligence course.",
-                "Assist in teaching and holding office hours to help students understand the course material.",
-                "Grade assignments and maintain records.",
+                "Assist in teaching and holding office hours to help students understand the course material. Grade assignments and maintain records.",
             ],
         },
         {
@@ -34,8 +33,8 @@ const Exp = () => {
             description: [
                 "Designed Dataflow’s and Workflow architecture for order processing, inventory management, and sending notifications to customers regarding order status.",
                 "Designed and developed RESTful APIs with OAuth integration, ensuring secure and standardized communication for Purchase orders, Shipments, and Sales orders.",
-                "Responsible for managing all testing, moving, and configuration of changes/fixes into ERP systems.",
                 "Worked with business users to identify requirements and implement them in ERP systems through configuration changes, integration of third-party systems, customizations, and extensions.",
+                "Responsible for managing all testing, moving, and configuration of changes/fixes into ERP systems.",
                 <React.Fragment key="tech">
                     <span className="technology-highlight">Technologies and Frameworks:</span>{" "}
                     Python, Java, Spring Boot, MySQL, 4-GL, Shell Scripting, XML, RESTful APIs.
@@ -48,7 +47,7 @@ const Exp = () => {
             date: "May 2019 - August 2019",
             description: [
                 "Debugged and fixed front-end and back-end issues, improving site performance.",
-                "Designed and developed a fashion website using HTML, CSS, JavaScript, and Node.js to create an engaging and responsive user experience. Utilized GIT to manage codebase updates.",
+                "Designed and developed a fashion website using CSS, React.js and Node.js to create an engaging and responsive user experience. Utilized GIT to manage codebase updates.",
             ],
         },
     ];
